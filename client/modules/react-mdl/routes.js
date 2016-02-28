@@ -4,7 +4,7 @@ import React from 'react';
 import TitleText from './components/molecules/title-text.jsx';
 
 // all organisms
-import MdlBanner from './components/organisms/mdl-banner.jsx';
+import MdlFeaturette from './components/organisms/mdl-featurette.jsx';
 
 // all templates
 import MdlPage from './components/templates/mdl-page.jsx';
@@ -24,25 +24,25 @@ export default (injectDeps, context) => {
     }
   });
 
-  FlowRouter.route('/react-mdl-design/mdl-banner/:position', {
+  FlowRouter.route('/react-mdl-design/mdl-feauturette/:position', {
     action(params) {
       const {position} = params;
       mount(MdlPageCtx, {
-        appSections: () => (React.createElement(MdlBanner, {
-          displayName: 'MdlBanner',
+        appSections: () => (React.createElement(MdlFeaturette, {
+          displayName: 'MdlFeaturette',
           position
         }))
       });
     }
   });
 
-  FlowRouter.route('/react-mdl-design/mdl-banner/:position/:height', {
+  FlowRouter.route('/react-mdl-design/mdl-featurette/:position/:height', {
     action(params) {
       const {position, height} = params;
       const heightPercent = !isNaN(parseFloat(height)) ? parseFloat(height) : 1;
       mount(MdlPageCtx, {
-        appSections: () => (React.createElement(MdlBanner, {
-          displayName: 'MdlBanner',
+        appSections: () => (React.createElement(MdlFeaturette, {
+          displayName: 'MdlFeaturette',
           position,
           heightPercent
         }))
