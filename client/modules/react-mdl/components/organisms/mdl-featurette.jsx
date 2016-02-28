@@ -149,7 +149,7 @@ MdlBanner.defaultProps = {
   withBackgroundImage: false,
   classList: [],
   extraSection: () => null,
-  heightPercent: 1,
+  heightPercent: 0,
   position: 'left'
 };
 
